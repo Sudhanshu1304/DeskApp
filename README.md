@@ -35,3 +35,9 @@ So the main idea about the project is to use our own data to study our own behev
 3. Our biases
 
 <br>
+
+<br>
+
+# Preview
+
+![](Images\GIF.gif)
