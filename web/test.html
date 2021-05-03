@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+  </head>
+  <body data-spy="scroll" data-target="#navbarResponsive" class="bomain" >
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js?_ga=2.215462739.579219030.1603383639-1179195139.1603383639"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="/eel.js"></script>
+
+    <!--             #############             -->
+    <!-- Home Section Starting -->
+
+    <div id="header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md  navbar-dark  fixed-top" >
+          <a  class="navbar-brand navcolour" href="#" role="button" ><i class="fas fa-desktop fa-1x"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse"  style="color: white;"  data-target="#collapsenav">
+          <span class="navbar-toggler-icon" style="color: white;"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsenav">
+            <ul class="navbar-nav pl-3" >
+              <!--ml-auto : will allign in left-->
+              <li class="nav-item">
+                <!--The href : #X , X: is the id of some dive element to jump to -->
+                <a href="#home" style="color: white;" type="button" onclick="tohome()" class="nav-link navcolour navspace" >Home</a>
+              </li>
+              <li class="nav-item">
+                
+                <div class="dropdown ">
+                    <a class="btn dropdown-toggle navspace" data-toggle="dropdown" style="color: white;border-color:white;" >Interactive Mode</a>
+                    <div class="dropdown-menu interactive">
+                        <form class="form-check">
+                            
+                            <div class="inputGroup ">
+                                <p>Select any Two</p>
+                                <br>
+                                <input type="checkbox" class="form-check-input" id="Home">
+                                <label class="form-check-label "  for="Home">Home</label>
+                                <br><br>
+                                <input type="checkbox" class="form-check-input" id="Time">
+                                <label class="form-check-label " for="Time">Time</label>
+                                <br><br>
+                                <input type="checkbox" class="form-check-input" id="Source">
+                                <label class="form-check-label " for="Source">Source</label>
+                                <br><br>
+                                <input type="checkbox" class="form-check-input " id="Dates">
+                                <label class="form-check-label " for="Dates">Dates</label>
+                                <br><br>
+                                <input type="checkbox" class="form-check-input " id="Done">
+                                <label class="form-check-label " for="Done">Check when Done!</label>
+                                <br><br>
+                            </div>
+                            
+
+                        </form>
+                    </div>
+                </div>
+
+              </li>
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link">Sec3</a>
+              </li> -->
+              <li class="nav-item">
+                <!-- <a href="#" type="button" onclick="Update()" class="nav-link navcolour">Update</a> -->
+
+                <a href="#" type="button" onclick="info('overlay')" class="nav-link navcolour navspace" id="infobut"  data-toggle="infocard" data-target="#infocard" style="color: white;">Update</a>
+
+                <div id="overlay" class="overlay" style="display: none;">
+
+                    <div class="card infocard " id="infocard" >
+                        <div class="card-header">
+                            Info
+                            <button class="close" onclick="info('overlay')" data-dismiss="infocard">&times;</button>
+                        </div>
+                        <div class="card-body ">
+                            <p class="card-text upcardtext">
+                                <h5 id="lastupdate"></h5>
+                                <div id="updaterunning"></div>
+                                <div class=" updategeneral">
+                                    <br>
+                                    Calling update function will close you browser for a moment( to get the exact time for latest use of browser). 
+                                    <br><br>
+                                </div>
+                                
+                                <button  type="button"
+                                
+                                id="updatebutvalue" onclick="Update()" class="but "></a>
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                           
+                        </div>
+                    </div>
+
+                </div>
+                
+              </li>
+              <li class="nav-item ">
+                <a href="#" type="button" onclick="Refresh()" class="nav-link navcolour navspace" style="color: white;">Refresh</a>
+              </li>
+              <li class="nav-item " >
+                  <a  href="#" id="ref_notify"  class="nav-link navcolour"></a>
+                  
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- BELLO -->
+    <!-- SideBar -->
+    <div class="loader" id="loader"></div>
+    <div class="below" id="below"  >
+        <div class="toggle container" id="sidebar">
+            <ul class="nav flex-column ">
+                <button class="but-sidebar" onclick="tohome()" id="homebut" style="color: white;" type="button"> <i class="fas fa-home fa-2x"></i> Home</button>
+                <button class="but-sidebar" onclick="change()" id="timebut" type="button"> <i class="fas fa-stopwatch fa-2x"></i> Time</button>
+                <button class="but-sidebar" id="srcpg" onclick="change2()"><i class="fab fa-chrome fa-2x"></i>Sources</button>
+                <button class="but-sidebar" id="datepg" onclick="change3()"><i class="fas fa-calendar-check fa-2x"></i>Months</button>
+                <button class="but-sidebar" id="aboutpg" onclick="change4()"><i class="fas fa-file-invoice-dollar fa-2x"></i>About</button>
+                
+            </ul>
+        </div>
+        <!-- SideBar END -->
+
+
+
+        <!-- CONTENT CONTAINER -->
+        <div class="container-fluid content" id="content">
+            <!-- general card start -->
+            <div class="card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs navinfo">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="time">
+                        Today
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:range_data1()" role="button" aria-haspopup="true" aria-expanded="false" id="0" >Time Period</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" id="1" >Today</a>
+                        <a class="dropdown-item" href="#" id="2" >This Week<a>
+                        <a class="dropdown-item" href="#" id="3" >This Month</a>
+                        </div>
+                    </li>
+                    <li>
+
+                        <button type="button" onclick="info('overlay12')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocard" data-target="#infocard">Info</button>
+                        <div id="overlay12" class="overlay" style="display: none;">
+
+                            <div class="card infocard " id="infocard" tabindex="-1">
+                                <div class="card-header">
+                                    Info
+                                    <button class="close" onclick="info('overlay12')" data-dismiss="infocard">&times;</button>
+                                </div>
+                                <div class="card-body infocard">
+                                    <p class="card-text ">
+                                        These Analytics helps us in understending how much percentage of  total activity performed today is belonging to a perticular category<strong> 
+                                           <br> For example : 52% AI  ,  30% WebD  ,  34% Others </strong> and so on 
+                                        <br><br>
+                                       
+                                        Lang : It identifies user activity related to - Coding in languages - (Python , C++/C , Java , Scripting , Bash ,..)
+                                        <br><br>
+                                        Entertainment - It will include every other aspects like Music , Movies , Shoping etc.
+
+                                    </p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                    <li></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center justify-content-between paibar1_row" id="fgfr">
+                    <!-- first graph first row first column -->
+                    <div class="row paibar paibar1" id="fgfrfc">
+                        <canvas id="pai1"></canvas>
+                    </div>
+                    <div class="row paibar paibar2" id="fgfrsc">
+                        <canvas id="bar1"></canvas>
+                    </div>
+                    </div>
+                </div>
+               
+            </div>
+                <!-- general card ends -->
+                <!-- time card starts -->
+            <div class="card">
+                <div class="card-header">
+                    <nav class="nav nav-pills">
+                    <!-- <a class="nav-link active" href="#">Compare</a> -->
+                    <button type="button" onclick="general_time(1,del=true)" class="btn btn-primary nav-link mr-5">Compare</button>
+                    
+                    <br><br>
+                 
+
+                        <button type="button" onclick="info('overlay13')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocard" data-target="#infocard">Info</button>
+                        <div id="overlay13"  class="overlay" style="display: none;">
+
+                            <div class="card infocard " id="infocard" tabindex="-1">
+                                <div class="card-header">
+                                    Info
+                                    <button class="close" onclick="info('overlay13')" data-dismiss="infocard">&times;</button>
+                                </div>
+                                <div class="card-body ">
+                                    <p class="card-text">
+                                        <br>
+                                        These activity time curve  representation  tells us how active we were throught the day starting from 00:00 AM to 23:00 PM . Along with these we can compare it with the previous day.
+                                        <br><br>
+                                        We can also see the total activity on a perticular day for thorought the comming week. This helps us in keeping us motivated for working more on every comming day .
+                                        <br><br>
+                                        The Heights of both the curves quantifies how active we were at a perticular point of time or on a pericuar day.
+                                        <br>
+                                    </p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                    
+
+                    </nav>
+                </div>
+                <div class="card-body ">
+
+                    <div class="row align-items-center justify-content-between paibar12_row">
+
+                        <div class="row paibar paibar12">
+                            <canvas id="bar2"></canvas>
+                        </div>
+                        <div class="row paibar paibar22
+                        
+                        ">
+                            <canvas id="bar3"></canvas>
+                        </div>
+                    </div>
+                   
+                </div>
+                
+            </div>
+                <!-- time card end -->
+                <!-- class dist starts -->
+            
+            
+            <div class="card ytrue">
+                <div class="card-header">
+                    
+
+                        <button type="button" onclick="info('overlay14')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocard" data-target="#infocard">Info</button>
+                        <div id="overlay14" style="display: none;" class="overlay">
+
+                            <div class="card infocard " id="infocard" tabindex="-1">
+                                <div class="card-header">
+                                    Info
+                                    <button class="close" onclick="info('overlay14')" data-dismiss="infocard">&times;</button>
+                                </div>
+                                <div class="card-body infocard">
+                                    <p class="card-text">
+                                        Through this graph we can see where ,when and how long we excellty  invested our time into .
+                                        Because it may happen that we  were highly active today but what excetelly we were doing is somthing very importent to know.
+                                        <br><br>
+                                        So here the different coloured curvs shows about the time distribution of different Classes.
+                                    </p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                  
+                </div>
+                <div class="card-body paibar1_row">
+                   
+                        <div class="row genclass" style="height: 100%;">
+                            <canvas id="CLSDIST">
+                            </canvas>
+                       
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                  
+
+                        <button type="button" onclick="info('overlay15')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocard" data-target="#infocard">Info</button>
+                        <div id="overlay15" class="overlay" style="display: none;">
+
+                            <div class="card infocard " id="infocard" tabindex="-1">
+                                <div class="card-header">
+                                    Info
+                                    <button class="close" onclick="info('overlay15')" data-dismiss="infocard">&times;</button>
+                                </div>
+                                <div class="card-body infocard">
+                                    <p class="card-text">
+                                        This distribution tells us about the the top resources or websites we visited today
+                                        <br>
+                                        The height tells us about to total number of searches of a perticular domain. 
+                                    </p>
+                                </div>
+                                <div class="card-footer text-muted">
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                        
+
+                   
+                </div>
+                <div class="card-body">
+                    <div class="row" style="height: 100%;">
+                    <!-- general-source-graph -->
+                    <canvas id="gsg"></canvas>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+              
+                </div>
+            </div>
+
+
+            
+       
+
+        </div>
+        <!-- Content ends -->
+    
+        <!-- time-graph-page -->
+        <div class="container-fluid content" id="timepage" style="display: none;">
+          
+            
+            <div class="container-fluid m-2 p-0 tpcontainer">
+                <div class="row ">
+                    <div class="col-xl-12 " >
+
+                        <div class="card border-primary mb-3 cardtd cardcoltd">
+                            <div class="card-header" style="display: flex;justify-content: space-between;">
+                                <div id="tday0"></div>
+                                <!-- <h1>Today</h1> -->
+                                <button type="button" onclick="info('overlay3')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocardtime" data-target="#infocardtime">Info</button>
+                                    <div id="overlay3" class="overlay" style="display: none;">
+
+                                        <div class="card infocardtime " id="infocardtime" tabindex="-1">
+                                            <div class="card-header">
+                                                Info
+                                                <button class="close" onclick="info('overlay3')" data-dismiss="infocardtime">&times;</button>
+                                            </div>
+                                            <div class="card-body infocard">
+                                                <p class="card-text">
+                                                   This Section gives us the info about the a complete previous week including the present day(if updated) 
+                                                   <br>
+                                                   <br>
+                                                    This page helps us in understanding our daily routine
+                                                    <br>
+                                                    Looking over a complete weeks time trends we can eassily detect our working pattern
+                                                    i.e spot the time period where we are most active and productive.
+                                                    <br>  
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                            <div class="card-body" style="min-height: 50vh;">
+                                <canvas id="today-0"></canvas>
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+            
+            
+            <div class="row">
+                <div class="col-xl-6">
+
+                    <div class="card  border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header " id="tday1">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-1"></canvas>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-xl-6">
+
+                    <div class="card   border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header " id="tday2">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-2"></canvas>
+                        </div>
+                        
+                    </div>
+
+                   
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="card   border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header " id="tday3">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-3"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card   border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header " id="tday4">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-4"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="card   border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header " id="tday5">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-5"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card   border-primary mb-3 cardtd cardcoltd">
+                        <div class="card-header "  id="tday6">
+                            Header
+                        </div>
+                        <div class="card-body sgh">
+                            <canvas id="today-6"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+           
+            
+        </div>
+        </div>
+                    <!-- time-graph-page ENDS-->
+
+
+                    <!-- source page starts -->
+        
+                    <div class="container-fluid content" id="sourcepage" style="display: none;">
+
+                        <div class="container-fluid srcontainer">
+            
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <div class="card border-primary mb-3 cardtd cardcolsrc">
+                                        <div class="card-header">
+                                            <ul class="nav nav-tabs">
+                                                <li class="nav-item">
+                                                    <h1 id="src_time">Today</h1>
+                                                </li>
+                                                
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Time Period</a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" type="button" id="sg1" onclick="call(this.id)">Today</a>
+                                                        <a class="dropdown-item" type="button" id="sg2" onclick="call(this.id)" >This Week</a>
+                                                        <a class="dropdown-item" type="button" id="sg3" onclick="call(this.id)" >This Month</a>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <button type="button" onclick="info('overlay4')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocardsrc" data-target="#infocardsrc">Info</button>
+                                                    <div id="overlay4" class="overlay" style="display: none;">
+
+                                                        <div class="card infocardsrc " id="infocardsrc" tabindex="-1">
+                                                            <div class="card-header">
+                                                                Info
+                                                                <button class="close" onclick="info('overlay4')" data-dismiss="infocardsrc">&times;</button>
+                                                            </div>
+                                                            <div class="card-body infocard">
+                                                                <p class="card-text">
+                                                                    This Section helps in understanding the resoureces or urls that we are using in specfic domains ,<br> Which helps in getting better insights in different domain 
+                                                                </p>
+                                                            </div>
+                                                            <div class="card-footer text-muted">
+                                                                
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </li>
+                                               
+                                            </ul>
+                                        </div>
+                                        <div class="card-body" style="min-height: 80vh;">
+                                            <canvas id="srchead">
+                                                <!-- source head -->
+            
+                                            </canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- total classifications for now is 4 will be unlimitted in premium -->
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                        <div class="card-header">
+                                            <i class="fas fa-robot fa-2x"></i>&nbsp; &nbsp;    AI 
+                                        </div>
+                                        <div class="card-body sgh">
+                                            <canvas id="clasif1">
+                                                <!-- clasification 1 -->
+                                            </canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-6 ">
+                                    <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                        <div class="card-header">
+                                            <i class="fab fa-instagram fa-2x"></i> &nbsp;&nbsp;    Social Media 
+                                        </div>
+                                        <div class="card-body sgh">
+                                            <canvas id="clasif6">
+                                                <!-- clasification 2 -->
+                                            </canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                        <div class="card-header">
+                                            <i class="fab fa-node-js fa-2x"></i> &nbsp; &nbsp; 
+                                            WebD
+
+                                        </div>
+                                        <div class="card-body sgh">
+                                            <canvas id="clasif3">
+                                                <!-- clasification 3 -->
+                                            </canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                        <div class="card-header">
+                                            <i class="fab fa-android fa-2x"></i> &nbsp;&nbsp; 
+                                            AppD
+                                        </div>
+                                        <div class="card-body sgh">
+                                            <canvas id="clasif4">
+                                                <!-- clasification 4 -->
+                                            </canvas>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                <div class="row">
+            
+                                    <div class="col-md-6 ">
+                                        <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                            <div class="card-header">
+                                                <i class="fas fa-gamepad fa-2x"></i> &nbsp;&nbsp;  GameD 
+                                            </div>
+                                            <div class="card-body sgh">
+                                                <canvas id="clasif2">
+                                                    <!-- clasification 4 -->
+                                                </canvas>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                            <div class="card-header">
+                                                <i class="fas fa-music fa-2x"></i> &nbsp;&nbsp;  Others
+                                            </div>
+                                            <div class="card-body sgh">
+                                                <canvas id="clasif5">
+                                                    <!-- clasification 4 -->
+                                                </canvas>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+            
+                                </div>
+                                
+            
+                                <div class="row">
+                                    <div class="col-md-12 ">
+                                        <div class="card border-primary mb-3  cardtd cardcolsrc">
+                                            <div class="card-header">
+                                                <i class="fas fa-code-branch fa-2x"></i> &nbsp; &nbsp; Language 
+                                            </div>
+                                            <div class="card-body sgh">
+                                                <canvas id="clasif7">
+                                                    <!-- clasification 4 -->
+                                                </canvas>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                        </div>
+                        
+                    </div>
+                <!-- source page ends -->
+                <!-- date-page-starts -->
+        <div class="container-fluid content contentdp" id="datepage" style="display: none;">
+            <div class="container-fluid">
+                <div class="row rochild">
+                    <div class="col-md-12">
+                        <div class="card border-primary mb-3 cardcolsrc  ">
+
+                            <div class="card-header ">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <h1 id="date_time"  >Prev Week</h1>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"  aria-expanded="false">Time Period</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" type="button" id="dg1" onclick="call_date(this.id)">Prev Week</a>
+                                            <a class="dropdown-item" type="button" id="dg2" onclick="call_date(this.id)" >Prev Month</a>
+                                            <a class="dropdown-item" type="button" id="dg3" onclick="call_date(this.id)" >3 Months</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button type="button" onclick="info('overlay2')" class="btn btn-primary  pull-right" id="infobut" data-toggle="infocarddate" data-target="#infocarddate">Info</button>
+                                    <div id="overlay2" class="overlay" style="display: none;">
+
+                                        <div class="card infocarddate " id="infocarddate" tabindex="-1">
+                                            <div class="card-header">
+                                                Info
+                                                <button class="close" onclick="info('overlay2')" data-dismiss="infocarddate">&times;</button>
+                                            </div>
+                                            <div class="card-body infocard">
+                                                <p class="card-text">
+                                                    This section helps us in keeping the track of our working pattern throught the months.
+                                                    This is very helpfull section as we can see our work trend for more than 1 month . <br>
+                                                    The second graph helps in direct compares or diffreent months
+                                                    <br>
+                                                    <strong>Note : </strong>The height of the distribution tells us about how active we were on a perticular date.
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-muted">
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="card-body" >
+                                <canvas id="datedist"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card cardcolsrc">
+                    <div class="card-header">
+                        Header
+                    </div>
+                    <div class="card-body">
+                        <canvas id="mondist"></canvas>
+                    </div>
+                    <div class="card-footer text-muted">
+                        
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <!-- About Page -->
+
+        <div class="container-fluid content"  id="aboutpage" style="display: none;">
+            <!-- <div class="container">
+
+                <div class="row photorow">
+                    <div class="col-xs-2 photo">
+                        <div  >
+                            photo
+                        </div>
+                    </div>
+                    <div class="col-xs-10 last_update">
+                       <div >
+                           Last Update on 
+                       </div>
+                    </div>
+
+                </div> -->
+
+                <header class="masthead bg-primary text-white text-center">
+                    <div class="container d-flex align-items-center flex-column">
+                        <!-- Masthead Avatar Image-->
+                        <img class="masthead-avatar mb-5 img"  src="assets/img/avataaars.svg" alt="" />
+                        <!-- Masthead Heading-->
+                        <h1 class="masthead-heading text-uppercase mb-0">Holla</h1>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- Masthead Subheading-->
+                        
+                    </div>
+                </header>
+                <!-- Portfolio Section-->
+                <section class="page-section portfolio" id="portfolio">
+                    <div class="container" >
+                        <!-- Portfolio Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Project</h2>
+                        <!-- Icon Divider-->
+
+                        <div class="divider-custom portcontent" >
+                            <div class="row">
+                                <div class="header abouthead">
+                                    <h2>Your Social Media “Likes” Expose More Than You Think</h2>
+                                    -- Jennifer Golbeck 
+                                </div>
+                                <div class="card-body portcardbody">
+                                    <p class="card-text aboutin">
+                                        <br>
+                                        In this fast growing world of bigdata emerging technology has the ability to predict our personalities and essentially know more about you than your friends and family do. <br><br>
+                                        
+                                        Tech gaints like <strong> Facebook, Instagram, Twitter</strong> and other big companies have the ability to collect information about you. This data is collected through your device, google searches, and things you like and post, that can help to determine “hidden attributes about you that you didn’t even know you were sharing information about” 
+                                        </p>
+                                </div>
+                            </div>
+                            <br> 
+                            
+                            
+
+                            
+                            <br>
+                            <div class="row">
+                                <div class="header abouthead">
+                                    <h2> <strong>If they can why can't we do the same ?</strong> 
+                                        i.e Use our own data to understand our ownselves.
+                                    </h2>
+                                    
+                                </div>
+                                <div class="card-body portcardbody">
+                                    <p class="card-text aboutin">
+                                       
+                                        This software Aims at using our data to help in our growth rather than just letting it missused by others. <br><br>
+
+                                       So the main idea about the project is to leverage the power of latest Artificial Intellingence Algorithiums and Analytices to use our own data to analyze ourselves to help us in 
+                                       <br>
+                                       1. Understing our micro habites <br>
+                                       2. Working pattern <br>
+                                       3. Our biases  <br><br>
+                                        
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+
+
+                            <div class="row">
+                                <div class="header abouthead">
+                                    <h2>Deskapp Stracture</h2>
+                                </div>
+
+                                <div class="card-body portcardbody">
+                                    <p class="card-text aboutin">
+                                        <strong>The Home Page </strong> <br> It is all about the Activity we performed today. That is it shows us the analytices of the present day.
+
+                                    </p>
+                                    <p class="card-text aboutin">
+                                       
+                                        <strong>The Time page</strong>  
+                                        <br>
+                                        This page helps us in understanding that our daily routine
+                                        <br>
+                                        Looking over a complete weeks time trends we can eassily detect our working pattern
+                                        i.e spot the time perioud where we are most active and productive.
+                                        <br>  
+                                    </p>
+
+                                    <p class="card-text aboutin">
+                                       
+                                        <strong>The Source page </strong>
+                                        
+                                        <br>
+                                        This page tells us in detail about the sources we used for individual Clases.
+                                        Which helps in better insites to each domain
+                                       <br>
+                                    </p>
+
+                                    <p class="card-text aboutin">
+                                       <strong>The Months page </strong>
+                                        
+                                        <br>
+                                        Here are some of prety amazing analytices present which helps us to know 
+                                       <br>
+                                    </p>
+
+                                    <p class="card-text aboutin">
+                                       
+                                        <strong>The Interactive Mode </strong>
+                                        
+                                        <br>
+                                        This feature helps user in analaysing more than one thing which are connected to each other
+                                        at the same time .
+                                       <br>
+                                    </p>
+
+                                    <p class="card-text aboutin">
+                                       <strong>Update vs Refresh</strong>
+                                        
+                                        <br>
+                                        Update is used to to update youre Analytices to your current time of use.
+
+                                        <br>
+                                        while the Software does the Auto Refresh in every 20 sec till the processing of data gets over. This is done to ensure that the the Analytics displayed is latest.  
+                                       <br>
+                                    </p>
+
+
+                                </div>  
+                            </div>
+
+                            <div class="row">
+
+                                <div class="card">
+                                    <div class="card-header abouthead">
+                                        <h1>Connect Info</h1>
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title carddata">
+                                            <br><br>
+                                            If you have a privacy concern, complaint, or question please contact at</h4>
+                                            <br>
+                                            <h2><strong> <a href="#"><i class="fas fa-envelope fa-2x"></i> Deskapp@gamil.com</a></strong></h2>
+                                            <br><br>
+                                            <h3>Connect with me at</h3 ><br>
+                                            <h2><strong> <a href="#"><i class="fab fa-github-square fa-2x"></i> https://github.com/Sudhanshu1304</a></strong></h2>
+                                            <br><br>
+                                            <h2><strong> <a href="#"><i class="fab fa-linkedin fa-2x"></i> https://www.linkedin.com/in/sudhanshu-pandey-847448193/</a></strong></h2>
+                                        <br>
+                                        
+                                        
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        
+
+                        
+                        
+                    </div>
+                </section>
+                
+                
+
+                
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+
+
+        $("#infobut").click(async function(){
+            console.log("Into Upadte Function")
+            var running = await eel.last_update()();
+            console.log("RUN IS : \n",running)
+
+            if(running=="True"){
+                document.getElementById('updaterunning').innerHTML="Data is Already being processed once Preprocesssing is done Update will be avaliable .";
+                document.getElementById('lastupdate').innerHTML="";
+                document.getElementById("updatebutvalue").innerHTML="Running!!!";
+                document.getElementById("updatebutvalue").disabled =true;
+            }
+            else{
+
+                document.getElementById("updatebutvalue").disabled =false;
+                document.getElementById('updaterunning').innerHTML="";
+                document.getElementById('lastupdate').innerHTML="Last Updated at - "+running;
+                document.getElementById("updatebutvalue").innerHTML="Update";
+            }
+            
+          });
+
+        
+
+        async function Update(){
+            console.log("Update!!!");
+            eel.UpdateData();
+        }
+        async function Refresh(){
+            console.log('Refreshing2');
+      
+            eel.End();
+            general();
+            timepageddist(2);
+            source_graph();
+            date_dist_page();
+      
+        }
+        
+        
+
+        
+
+        var limit = 2;
+        $('input.form-check-input').on('change', function(evt) {
+
+        if($(this).siblings(':checked').length >= limit) {
+            this.checked = false;
+        
+            if($(this).siblings(':checked').length == limit) {
+                var len =document.querySelectorAll('input[type="checkbox"]:checked').length;
+                var ids1 = document.querySelectorAll('#Home:checked');
+                var ids2 = document.querySelectorAll('#Time:checked');
+                var ids3 = document.querySelectorAll('#Source:checked');
+                var ids4 = document.querySelectorAll('#Dates:checked');
+                
+
+                Interactive(ids1.length,ids2.length,ids3.length,ids4.length);
+                //var ids4 = document.querySelectorAll('#Time:checked');
+                //chreate it later 
+
+                console.log("ID ARE : ",ids1.length,ids2.length,ids3.length);
+            
+                
+            }
+        }
+        });
+
+        function call_date(ID){
+            // date Graph Function
+            if (ID =="dg1"){
+                document.getElementById("date_time").innerHTML="Prev Week";
+                date_dist_page(val=1);
+            }
+            else if(ID =="dg2"){
+                document.getElementById("date_time").innerHTML="Prev Month";
+                date_dist_page(val=2);
+            }
+            else if(ID =="dg3"){
+                document.getElementById("date_time").innerHTML="Last 3 Months";
+                date_dist_page(val=3);
+            }
+            
+        }
+
+        function call(ID){
+            // Source Graph Function
+            if (ID =="sg1"){
+                document.getElementById("src_time").innerHTML="Today";
+                source_graph(val=1);
+            }
+            else if(ID =="sg2"){
+                document.getElementById("src_time").innerHTML="This Week";
+                source_graph(val=2);
+            }
+            else if(ID =="sg3"){
+                document.getElementById("src_time").innerHTML="This Month";
+                source_graph(val=3);
+            }
+            
+        }
+      // CARD 1
+      
+      function change(){
+        // this is switch to timepage
+        
+        
+
+        document.getElementById("homebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("homebut").style.color='black';
+
+        document.getElementById("timebut").style.backgroundImage='linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280)';
+        document.getElementById("timebut").style.color='white';
+
+        document.getElementById("srcpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("srcpg").style.color='black';
+
+        document.getElementById("datepg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        
+        document.getElementById("datepg").style.color='black';
+
+        document.getElementById("aboutpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("aboutpg").style.color='black';
+
+        document.getElementById("content").style.display="none";
+        document.getElementById("sourcepage").style.display="none";// None to Src when opening timepage
+        document.getElementById("datepage").style.display="none";
+        document.getElementById("aboutpage").style.display="none";
+        document.getElementById("timepage").style.display="block";
+        
+        timepageddist(2);
+        
+      }
+      function change2(){
+        // this is switch to sourcepage
+        
+        document.getElementById("homebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("homebut").style.color='black';
+
+        document.getElementById("timebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("timebut").style.color='black';
+
+
+        document.getElementById("srcpg").style.backgroundImage='linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280)';
+        document.getElementById("srcpg").style.color='white';
+
+        document.getElementById("datepg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("datepg").style.color='black';
+
+        document.getElementById("aboutpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("aboutpg").style.color='black';
+
+        
+
+        document.getElementById("content").style.display="none";
+        document.getElementById("timepage").style.display="none";
+        document.getElementById("datepage").style.display="none";
+        document.getElementById("sourcepage").style.display="block";
+        document.getElementById("aboutpage").style.display="none";
+        source_graph();
+      }
+
+      function change3(){
+        // this is switch to datepage
+
+        document.getElementById("homebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("homebut").style.color='black';
+
+        document.getElementById("timebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("timebut").style.color='black';
+
+        document.getElementById("srcpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("srcpg").style.color='black';
+
+        document.getElementById("datepg").style.backgroundImage='linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280)';
+        document.getElementById("datepg").style.color="white"
+
+        document.getElementById("aboutpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("aboutpg").style.color='black';
+
+        document.getElementById("content").style.display="none";
+        document.getElementById("timepage").style.display="none";
+        document.getElementById("sourcepage").style.display="none";
+        document.getElementById("datepage").style.display="block";
+        document.getElementById("aboutpage").style.display="none";
+        date_dist_page();
+      }
+
+      function change4(){
+
+
+        document.getElementById("homebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("homebut").style.color='black';
+
+        document.getElementById("timebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("timebut").style.color='black';
+
+        document.getElementById("srcpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("srcpg").style.color='black';
+
+        document.getElementById("datepg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("datepg").style.color="black"
+
+        document.getElementById("aboutpg").style.backgroundImage='linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280)';
+        document.getElementById("aboutpg").style.color='white';
+
+        document.getElementById("content").style.display="none";
+        document.getElementById("timepage").style.display="none";
+        document.getElementById("sourcepage").style.display="none";
+        document.getElementById("datepage").style.display="none";
+        document.getElementById("aboutpage").style.display="block";
+
+      }
+     
+      function tohome(){
+        
+        document.getElementById("homebut").style.backgroundImage='linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280)';
+        document.getElementById("homebut").style.color='white';
+
+        document.getElementById("timebut").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("timebut").style.color='black';
+
+        document.getElementById("srcpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("srcpg").style.color='black';
+
+        document.getElementById("datepg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        
+        document.getElementById("datepg").style.color='black';
+
+        document.getElementById("aboutpg").style.backgroundImage='linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff)';
+        document.getElementById("aboutpg").style.color='black';
+
+        if(typeof mychart_gen_src!='undefined'){
+            mychart_gen_src.destroy();
+        }
+        
+
+
+        document.getElementById("content").style.display="block";//visibility = "visible";
+        document.getElementById("timepage").style.display="none";
+        document.getElementById("sourcepage").style.display="none";
+        document.getElementById("datepage").style.display="none";
+        document.getElementById("aboutpage").style.display="none";
+      }
+
+      function Interactive(ids1,ids2,ids3,ids4){
+            console.log("THIS =>  ",ids1,ids2,ids3,ids4);
+            timepageddist(2);
+            source_graph();
+            date_dist_page();
+            
+            if(ids1==1 && ids2 ==1){
+                document.getElementById("datepage").style.display="none";
+                document.getElementById("content").style.display="block";
+                document.getElementById("timepage").style.display="block";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="none";
+
+            }
+            else if(ids1==1 && ids3 ==1){
+                document.getElementById("datepage").style.display="none";
+                document.getElementById("content").style.display="block";
+                document.getElementById("timepage").style.display="none";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="block";
+
+            }
+            else if(ids1==1 && ids4 ==1){
+                document.getElementById("datepage").style.display="block";
+                document.getElementById("content").style.display="block";
+                document.getElementById("timepage").style.display="none";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="none";
+
+            }
+            else if(ids2==1 && ids3 ==1){
+                document.getElementById("datepage").style.display="none";
+                document.getElementById("content").style.display="none";
+                document.getElementById("timepage").style.display="block";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="block";
+
+            }
+            else if(ids2==1 && ids4 ==1){
+                document.getElementById("datepage").style.display="block";
+                document.getElementById("content").style.display="none";
+                document.getElementById("timepage").style.display="block";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="none";
+
+            }
+            else if(ids3==1 && ids4 ==1){
+                document.getElementById("datepage").style.display="block";
+                document.getElementById("content").style.display="none";
+                document.getElementById("timepage").style.display="none";
+                document.getElementById("aboutpage").style.display="none";
+                document.getElementById("sourcepage").style.display="block";
+
+            }
+           
+
+      }
+      
+
+      function info(id2){
+            console.log("@@@@@@@@@@@ &&&&&&&&&&& into info");
+            document.getElementById(id2).style.position="fixed";
+            
+            var x = document.getElementById(id2);
+            if (x.style.display == "none") {
+                console.log("was none");
+                x.style.display = "block";
+                //document.getElementById(id).style.display=""
+            } else {
+                console.log("was not none");
+                x.style.display = "none";
+            }
+      }
+
+      $("#1").click(function(){
+      
+        document.getElementById("time").innerHTML="Today";
+        general_class(1,DEL1=true);
+      });
+      $("#2").click(function(){
+        
+        document.getElementById("time").innerHTML="This Week";
+        general_class(2,DEL1=true);
+      });
+      $("#3").click(function(){
+        console.log("GOT INTO");
+        document.getElementById("time").innerHTML="This Month";
+        general_class(3,DEL1=true);
+      });
+      
+      // CARD 1 - END
+      
+      
+      
+      // Side Bar Start
+      $(".navbar-brand").click(function(){
+        $("#sidebar").toggle();
+      });
+      
+      
+      // This function will hide the sidebar if less than X
+      $(window).resize(function() {
+      
+        if ($(this).width() < 900) {
+            
+         
+          document.getElementById('content').style.position="fixed";
+          document.getElementById('timepage').style.position="fixed";
+          document.getElementById('sourcepage').style.position="fixed";
+          document.getElementById('datepage').style.position="fixed";
+          document.getElementById('aboutpage').style.position="fixed";
+          document.getElementById('sidebar').style.opacity="0.8";
+          document.getElementById('sidebar').style.color="gray";
+      
+        } else {
+          
+            
+          document.getElementById('timepage').style.position="relative";
+          document.getElementById('content').style.position="relative";
+          document.getElementById('sourcepage').style.position="relative";
+          document.getElementById('datepage').style.position="relative";
+          document.getElementById('aboutpage').style.position="relative";
+          document.getElementById('sidebar').style.opacity="1";
+          document.getElementById('sidebar').style.color="rgb(68, 68, 184)";
+      
+        }
+      
+      });
+      //Side Bar End
+      
+    </script>
+  </body>
+</html>

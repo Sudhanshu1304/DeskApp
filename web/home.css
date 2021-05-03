@@ -1,0 +1,557 @@
+body{
+    overflow-y: hidden;
+    background-color: #000816;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.navbar{
+    background-color: rgb(26, 28, 45);
+ 
+}
+.navcolour{
+    color: white;
+}
+.nav-link{
+    color: white;
+    
+}
+.navspace{
+    margin-left: 20px ;
+    margin-right: 20px;
+}
+.but-sidebar{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.interactive{
+    margin-left: 10px;
+    padding: 10px;
+    font-size:large;
+    /* background-color: #000b3f; */
+    background-color: rgb(3, 3, 48,0.9);
+    color: white;
+    width: 300px;
+    height: fit-content;
+}
+
+.below{
+    display: flex;
+   
+    /* height: 100vh; */
+    
+}
+
+#sidebar{
+    
+    z-index: 4;
+    height: 100vh;
+    /* padding-top: 70px; */
+    padding-top: 150px;
+    /* background-image: linear-gradient(to bottom, #132c53, #102344, #0d1b36, #0a1228, #01041b); */
+    /* background-color: #060818; */
+    background-image: linear-gradient(to top, #000b3f, #030b35, #060a2c, #070922, #060818);
+    
+    border: 2px solid black;
+    /* background-image: linear-gradient(to top, #000c44, #000a3d, #020736, #02032f, #010028); */
+    margin-left: 0px;
+    flex: 3;
+    max-width: 220px;
+    
+}
+.but-sidebar{
+    
+
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 13px;
+    color: #000000;
+    padding: 11px 14px;
+    transition: .600s;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* background-color:rgba(22, 21, 66, 0.5); */
+
+}
+#homebut{
+    background-image:linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280);
+}
+
+.content {
+
+    overflow-y: scroll;
+    padding-top: 60px;
+    height: 100vh;
+    /* height: 100%; */
+    /* background-color: brown; */
+    flex: 10;
+}
+
+                            /* FIRST PAGE BAR-PAI CHART START */
+
+
+.paibar1_row{
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+}
+.paibar{
+    /* padding: 10px; */
+    margin: 0px;
+    height: 50%;
+    width: 100%;
+}
+.paibar1{
+    /* flex: 1; */
+    flex-grow: 1;
+}
+.paibar2{
+    /* flex: 1; */
+    flex-grow: 1;
+   
+    /* width: 100%;
+    height: 100%; */
+}
+/* FIRST PAGE BAR-PAI CHART END */
+
+
+.paibar12_row{
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+
+}
+
+.paibar2{
+    /* padding: 10px; */
+    margin: 0px;
+    height: 50%;
+    width: 100%;
+}
+.paibar12{
+    /* flex: 1; */
+    flex-grow: 1;
+}
+.paibar22{
+    /* flex: 1; */
+    flex-grow: 1;
+   
+    /* width: 100%;
+    height: 100%; */
+}
+
+/* first-page time-date starts */
+
+
+/* first-page time-date ends */
+
+
+.card{
+    margin: 5px;
+    height: 95vh;
+    /* background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527); */
+    background-color: #0e1726;
+    /* background-image: linear-gradient(to right, #000c44, #000a3d, #020736, #02032f, #010028); */
+    
+}
+
+.card-header{
+    background-color: #1a1c2d;
+    color: white;
+}
+
+#overlay{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#overlay12{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay13{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#overlay14{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#overlay15{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay2{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay3{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+#overlay4{
+    z-index: 10;
+    background-color: rgb(148, 149, 156,0.5);
+    cursor: pointer;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+#infocard{
+    height: fit-content;
+    width: 80%;
+    /* background-image: linear-gradient(to right, #00b1db, #009cdf, #0086df, #006dda, #004fcc, #083ebb, #0e2daa, #121b99, #071a88, #001977, #001767, #001456);
+    color: white; */
+    background-color: #060818;
+    z-index: 20;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+    
+}
+
+#infocarddate{
+    height: fit-content;
+    width: 80%;
+    /* background-image: linear-gradient(to right, #00b1db, #009cdf, #0086df, #006dda, #004fcc, #083ebb, #0e2daa, #121b99, #071a88, #001977, #001767, #001456);
+    color: white; */
+    background-color: #060818;
+    z-index: 20;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+    
+}
+#infocardtime{
+    height: fit-content;
+    width: 80%;
+    /* background-image: linear-gradient(to right, #00b1db, #009cdf, #0086df, #006dda, #004fcc, #083ebb, #0e2daa, #121b99, #071a88, #001977, #001767, #001456);
+    color: white; */
+    background-color: #060818;
+    z-index: 20;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#infocardsrc{
+    height: fit-content;
+    width: 80%;
+    /* background-image: linear-gradient(to right, #00b1db, #009cdf, #0086df, #006dda, #004fcc, #083ebb, #0e2daa, #121b99, #071a88, #001977, #001767, #001456);
+    color: white; */
+    background-color: #060818;
+    z-index: 20;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    
+    transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.row{
+    /* background-color: #0e1726; */
+    /* background-image: linear-gradient(to right, #01173a, #091732, #0f1629, #121621, #141519);*/
+    
+    /* background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527); */
+    background-color: #060818;
+
+    /* background-image: linear-gradient(to right, #000c44, #000a3d, #020736, #02032f, #010028); */
+    /* background-color: #374856;  */
+    
+}
+
+#timepage {
+    /* background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527); */
+    background-color: black;
+    overflow-x: hidden;
+    
+}
+.tpcontainer{
+    /* padding: 0px;
+    margin: 5%; */
+    width: 100%;
+}
+.cardcoltd{
+    background-color: #060818;
+}
+#sourcepage{
+    background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527);
+    background-color: rgb(255, 255, 255);
+}
+.srcontainer{
+    
+    width: 100%;
+}
+.cardcolsrc{
+    background-color: #060818;
+}
+/* #datepage{
+    background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527);
+} */
+
+
+.cardtd{
+    height: fit-content;
+    min-height:50vh ;
+}
+
+
+/* #sourcepage{
+    
+} */
+#datepage{
+    /* background-image: linear-gradient(to right top, #081428, #061128, #040e28, #020a27, #010527);
+    background-color: rgb(255, 255, 255); */
+    background-color: #060818;
+}
+
+
+
+.ytrue{
+    overflow-y: hidden;
+}
+
+.genclass{
+    padding: 5%;
+}
+/* NAVBAR - CHECKBOX */
+ 
+
+/* NAVBAR - CHECKBAX ENDS */
+.sgh{
+    min-height: 30vh;
+}
+
+
+.loader {
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    z-index: 50;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+  .photo{
+      height: 200px;
+      width: 200px;
+      background-color: chartreuse;
+  }
+  .last_update{
+      align-self: center;
+      background-color: aqua;
+  }
+
+  .photorow{
+      margin-top: 100PX;
+      display: flex;
+
+  }
+
+  img{
+      max-height: 50vh;
+    
+      /* background-color: #1abc9c; */
+  }
+
+  .portfolio{
+      margin-top: 200px;
+  }
+
+  /* .portcard{
+    margin-left: 0px;
+  }*/
+
+
+  .portcardbody{
+    margin: 100px;
+    
+  } 
+
+  .portcontent{
+      margin-top: 100px;
+      color: white;
+  }
+
+
+  .updategeneral{
+      border: 5x solid rgb(10, 10, 10);
+      color: white;
+      font-size: large;
+  }
+  #updaterunning{
+    color: black;
+    font-size: large;
+  }
+  .upcardtext{
+    color: white;
+  }
+  #lastupdate{
+    color: rgb(2, 6, 58);
+  }
+
+  #updatebutvalue{
+      background-color:  #060818;
+      color: white;
+  }
+
+  .infocard{
+    background-image:linear-gradient(to right, #416eb2, #2f59a9, #22449d, #1e2d90, #201280);
+    color: 
+    white;
+    font-size: x-large;
+    color: white;
+
+  }
+
+  .aboutin{
+      font-size: x-large;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+  .aboutcard{
+      width: 100%;
+      height: 20vh;
+  }
+
+  .carddata{
+    width: 100%;
+    
+  }
