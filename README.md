@@ -40,4 +40,5 @@ So the main idea about the project is to use our own data to study our own behev
 
 # Preview
 
-![](Images\GIF.gif)
+![](Images/GIF.gif)
+
