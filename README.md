@@ -2,7 +2,8 @@
 
 <div align="center">
 
-<a href="https://getdeskapp.herokuapp.com/"><img src="Images/desk.ico" style="height:50px">
+<a href="https://getdeskapp.herokuapp.com/"><img src="Images/desk.ico" style="height:30px">
+
 </a>
 
 <h1> <strong>  DeskApp</strong></h1>
@@ -42,7 +43,9 @@ So the main idea about the project is to use our own data to study our own behev
 
 <div align="center">
 
-![](Images/GIF.gif)
+
+
+<a href="https://getdeskapp.herokuapp.com/"><img src="Images/GIF.gif" style="height:300px">
 
 </div>
 
