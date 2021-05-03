@@ -1,0 +1,6 @@
+.vscode
+.idea
+__pycache__
+chrome_history.csv
+firefox_history.csv
+STATE
