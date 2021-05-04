@@ -15,7 +15,7 @@
 ### Website Link - [Click here ](https://getdeskapp.herokuapp.com/) [Get DeskApp](https://getdeskapp.herokuapp.com/)
 
 
-### [Watch a complete preview on Linkdin](https://www.linkedin.com/posts/sudhanshu-pandey-847448193_artificialintelliegence-nlp-desktops-activity-6795211619392598017-eXb8) 
+### [Watch a complete preview on Linkedin](https://www.linkedin.com/posts/sudhanshu-pandey-847448193_artificialintelliegence-nlp-desktops-activity-6795211619392598017-eXb8) 
 
 <br>
 
