@@ -14,7 +14,9 @@
 
 ### Website Link - [Click here ](https://getdeskapp.herokuapp.com/) [Get DeskApp](https://getdeskapp.herokuapp.com/)
 
-### 
+<br>
+
+### [Watch a complete preview on Linkdin](https://www.linkedin.com/posts/sudhanshu-pandey-847448193_artificialintelliegence-nlp-desktops-activity-6795211619392598017-eXb8) 
 
 <br>
 
@@ -39,6 +41,8 @@ So the main idea about the project is to use our own data to study our own behev
 
 <br>
 
+
+
 # Preview
 
 <div align="center">
@@ -48,6 +52,5 @@ So the main idea about the project is to use our own data to study our own behev
 <a href="https://getdeskapp.herokuapp.com/"><img src="Images/GIF.gif" style="height:300px">
 
 </div>
-
 
 
